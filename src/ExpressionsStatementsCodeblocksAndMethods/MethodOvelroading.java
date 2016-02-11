@@ -23,6 +23,11 @@ public class MethodOvelroading {
         return -1;
     }
 
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+
     public static double calcFeeAndInchesToCentimeters(double inches) {
         double feet = (int)(inches / 12.0);
         //so putting there (int) will make remainingInches useful and not equal 0 all the time, because feet will equal ony to integer value without remaining  decimals
